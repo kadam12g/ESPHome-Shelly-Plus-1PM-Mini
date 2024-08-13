@@ -37,7 +37,7 @@ Running stub...
 Error putting ESP in stub flash mode: Invalid head of packet (0x47)
 ```
 
-After ensuring the cabling was correct, I considered that `esphomeflasher` might not support the ESP32-C3 chip due to it being deprecated for some time. I then switched to the ESPHome Web method, which successfully connected to the ESP32 and completed the initial setup and firmware flashing. Although viewing logs was unsuccessful, the device appeared in Home Assistant after flashing. I confirmed that OTA updates were functional, then desoldered the wires, reassembled the device, and powered it externally to update the firmware via Home Assistant.
+After ensuring the cabling was correct, I considered that `esphomeflasher` might not support the ESP32-C3 chip due to it being deprecated for some time. I then switched to the ESPHome Web method, which successfully connected to the ESP32 and completed the initial setup and firmware flashing. Although viewing logs from the ESPHome Web tool was unsuccessful, the device appeared in Home Assistant after flashing. I confirmed that OTA updates were functional, then desoldered the wires, reassembled the device, and powered it externally to update the firmware via Home Assistant.
 
 Post-flashing, the voltage readings were incorrect, prompting me to apply a `multiply` filter to the sensor component within ESPHome to calibrate the readings accurately. The current and other sensor functionalities were verified to be precise.
 
